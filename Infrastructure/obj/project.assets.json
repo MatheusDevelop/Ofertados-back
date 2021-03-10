@@ -45,19 +45,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\willi\\.nuget\\packages\\": {}
+    "C:\\Users\\mtgat\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\willi\\Documents\\Matheus\\SENAI\\Ofertados\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\mtgat\\Documents\\Projetos\\OfertadosBackend\\Ofertados-back\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\willi\\Documents\\Matheus\\SENAI\\Ofertados\\Infrastructure\\Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\willi\\Documents\\Matheus\\SENAI\\Ofertados\\Infrastructure\\obj\\",
+      "projectPath": "C:\\Users\\mtgat\\Documents\\Projetos\\OfertadosBackend\\Ofertados-back\\Infrastructure\\Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\mtgat\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\mtgat\\Documents\\Projetos\\OfertadosBackend\\Ofertados-back\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\mtgat\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -69,9 +69,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\willi\\Documents\\Matheus\\SENAI\\Ofertados\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\willi\\Documents\\Matheus\\SENAI\\Ofertados\\Domain\\Domain.csproj"
+            "C:\\Users\\mtgat\\Documents\\Projetos\\OfertadosBackend\\Ofertados-back\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\mtgat\\Documents\\Projetos\\OfertadosBackend\\Ofertados-back\\Domain\\Domain.csproj"
             }
           }
         }
@@ -84,6 +85,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
@@ -99,7 +101,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xFxfDyKTjYXPPT33Gv1DqUBHRAaw1NOR0pBX19zI6uCry4b4Ac7zTkGqkThOwpFr8eOxaiOgY423D3SSaFukgw==",
+  "dgSpecHash": "eUyQ1Ls8sRS0InbMRwE4wK8FPL+gdZLLy3rmAI2qFVHlMI9S4423Xnpn/HSC74e9YM0ftiQEIfYeL7z3cJdg0Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\willi\\Documents\\Matheus\\SENAI\\Ofertados\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\mtgat\\Documents\\Projetos\\OfertadosBackend\\Ofertados-back\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
