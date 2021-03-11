@@ -7,5 +7,7 @@ namespace Domain.Entities
 {
     public class Categoria:Entity
     {
+        public string Nome { get; set; }
+        public string Url_imagem { get; set; }
     }
 }
