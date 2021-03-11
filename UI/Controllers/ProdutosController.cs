@@ -61,11 +61,12 @@ namespace UI.Controllers
 
             var produto = await _context.Produtos.FindAsync(idProduto);
             produto.Desconto_aplicado = false;
+            _context.Produtos.Update(produto);
+            await _context.SaveChangesAsync();
             return Ok();
         }
 
         [HttpGet("{id}")]
-
         public async Task<ActionResult<Produto>> GetProduto(Guid id)
         {
             var produto = await _context.Produtos.FindAsync(id);
