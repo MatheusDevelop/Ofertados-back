@@ -54,18 +54,17 @@ namespace UI.Controllers
         }
         [HttpPut]
         [Route("RemoverOferta")]
-        public async Task<IActionResult> RemoverOferta(Guid id)
+        public async Task<IActionResult> RemoverOferta(Guid idProduto)
         {
-            if(!ProdutoExists(id))
+            if(!ProdutoExists(idProduto))
                 return NotFound();
 
-            var produto = await _context.Produtos.FindAsync(id);
+            var produto = await _context.Produtos.FindAsync(idProduto);
             produto.Desconto_aplicado = false;
             return Ok();
         }
 
         [HttpGet("{id}")]
-        [Route("BuscarPorId")]
 
         public async Task<ActionResult<Produto>> GetProduto(Guid id)
         {
