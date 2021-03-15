@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "E6N/AAXD1Ye5DX7DzUyeIjWX3xWIXsgF+H6Af+yzj/idwaOlQCT3ot6IilGQHwDweTnLCtmlYZLwW6mAemJkDw==",
+  "dgSpecHash": "XHbHra/izoj0dkqrTDIxT+F3oWefCblOIJapQsEWomveLzCCd/3UIizYzcFYewt7N7/F13OeK2nAK/JOK23NNQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\willi\\Documents\\Matheus\\SENAI\\Ofertados\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "C:\\Users\\willi\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\willi\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\willi\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512"

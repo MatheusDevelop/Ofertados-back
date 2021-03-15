@@ -25,38 +25,15 @@ namespace Infrastructure.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.HasKey("Id");
-
-                    b.ToTable("Categoria");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Cliente", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Cpf")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("Data_nascimento")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Nome")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Senha")
+                    b.Property<string>("Url_imagem")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Tipo_perfil")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cliente");
+                    b.ToTable("Categorias");
                 });
 
             modelBuilder.Entity("Domain.Entities.Produto", b =>
@@ -142,28 +119,23 @@ namespace Infrastructure.Migrations
                     b.ToTable("ProdutoClientes");
                 });
 
-            modelBuilder.Entity("Domain.Entities.Vendedor", b =>
+            modelBuilder.Entity("Domain.Entities.Usuario", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Chave_pix")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Cnpj")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("Data_nascimento")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nome")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Razao_social")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Senha")
@@ -174,7 +146,38 @@ namespace Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Vendedores");
+                    b.ToTable("Usuarios");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("Usuario");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Cliente", b =>
+                {
+                    b.HasBaseType("Domain.Entities.Usuario");
+
+                    b.Property<string>("Cep")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Cpf")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasDiscriminator().HasValue("Cliente");
+                });
+
+            modelBuilder.Entity("Domain.Entities.Vendedor", b =>
+                {
+                    b.HasBaseType("Domain.Entities.Usuario");
+
+                    b.Property<string>("Chave_pix")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Cnpj")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Razao_social")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasDiscriminator().HasValue("Vendedor");
                 });
 
             modelBuilder.Entity("Domain.Entities.Produto", b =>

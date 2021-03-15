@@ -18,4 +18,16 @@ namespace UI.ViewModels
         public int Estrelas { get; set; }
 
     }
+    public class ComprasViewModelResult 
+    {
+        public ComprasViewModelResult(int avaliacao, string nome_produto)
+        {
+            Avaliacao = avaliacao;
+            Nome_produto = nome_produto;
+        }
+
+        public int Avaliacao { get; set; }
+        public string Nome_produto { get; set; }
+    }
+
 }

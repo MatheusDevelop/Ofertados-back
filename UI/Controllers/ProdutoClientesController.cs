@@ -24,15 +24,21 @@ namespace UI.Controllers
 
         [HttpGet]
         [Route("ListarCompras")]
-        public async Task<ActionResult<List<ProdutoCliente>>> ListarCompras(Guid id_cliente)
+        public async Task<ActionResult<List<ComprasViewModelResult>>> ListarCompras(Guid id_cliente)
         {
-            return await _context.ProdutoClientes.Where(e => e.Cliente_id == id_cliente).ToListAsync();
+            var lista =  await _context.ProdutoClientes.Include(e => e.Produto).Include(e => e.Vendedor).Where(e => e.Cliente_id == id_cliente).ToListAsync();
+            var listaResult = new List<ComprasViewModelResult>();
+            foreach(var item in lista)
+            {
+                listaResult.Add(new ComprasViewModelResult(item.Estrelas,item.Produto.Nome));
+            }
+            return listaResult;
         }
         [HttpGet]
         [Route("ListarVendas")]
         public async Task<ActionResult<List<ProdutoCliente>>> ListarVendas(Guid id_vendedor)
         {
-            return await _context.ProdutoClientes.Where(e => e.Vendedor_id == id_vendedor).ToListAsync();
+            return await _context.ProdutoClientes.Include(e=> e.Produto).Include(e=> e.Cliente).Where(e => e.Vendedor_id == id_vendedor).ToListAsync();
         }
         [HttpPost]
         [Route("Comprar")]
@@ -52,7 +58,7 @@ namespace UI.Controllers
             _context.Produtos.Update(searchProduto);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetProdutoCliente", new { id = produto.Id }, produto);
+            return Ok();
         }
         [HttpPut]
         [Route("Avaliar")]
@@ -63,7 +69,7 @@ namespace UI.Controllers
             _context.ProdutoClientes.Update(produto);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetProdutoCliente", new { id = produto.Id }, produto);
+            return Ok();
         }
 
 
